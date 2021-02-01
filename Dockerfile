@@ -77,6 +77,7 @@ RUN cd /root && \
         libopus-dev \
         libmp3lame-dev \
         mplayer \
+        unzip \
         screen && \
     git clone -b main https://github.com/rojserbest/VoiceChatPyroBot.git && cd VoiceChatPyroBot && \     
     apt-get update && apt build-dep pulseaudio -y && \
@@ -153,4 +154,4 @@ COPY xrdp.ini /etc/xrdp/xrdp.ini
 COPY autostartup.sh /root/
 CMD ["/bin/bash", "/root/autostartup.sh"]
                                     
-EXPOSE 3389 22
+EXPOSE 3389 22 9912
